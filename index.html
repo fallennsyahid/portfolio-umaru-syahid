@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Umaru Syahid M</title>
     <link rel="stylesheet" href="css/styles.css">
+    @vite(['resources/css/app.css','resources/js/app.js'])
+    <!-- Flowbite -->
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <!-- Localstorage Dark Mode -->
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
@@ -13,6 +16,8 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -341,24 +346,22 @@
                     </div>
                 </div>
 
-                <form action="">
+                <form action="https://formspree.io/f/xdknqdzp" method="post">
                     <div class="w-full lg:w-2/3 lg:mx-auto">
                         <div class="w-full mb-8 px-4">
                             <label for="name" class="text-base text-primary font-bold">Name</label>
-                            <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                            <input type="text" id="name" name="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" placeholder="name.." required/>
                         </div>
                         <div class="w-full mb-8 px-4">
                             <label for="email" class="text-base text-primary font-bold">Email</label>
-                            <input type="text" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                            <input type="text" id="email" name="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" placeholder="email.." />
                         </div>
                         <div class="w-full mb-8 px-4">
                             <label for="message" class="text-base text-primary font-bold">Message</label>
-                            <textarea type="text" id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32" ></textarea>
+                            <textarea type="text" id="message" name="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32" placeholder="message.." ></textarea>
                         </div>
                         <div class="w-full px-4">
-                            <a href="">
-                                <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Submit</button>
-                            </a>
+                                <button type="submit" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -403,9 +406,6 @@
                             </li>
                             <li>
                                 <a href="" class="inline-block text-base hover:text-primary mb-5">MySQL</a>
-                            </li>
-                            <li>
-                                <a href="" class="inline-block text-base hover:text-primary mb-5">Figma</a>
                             </li>
                         </ul>
                     </div>
@@ -487,7 +487,7 @@
 
         <!-- Back To Top Start -->
         <a href="#home" id="to-top" class="fixed z-[9999] hidden justify-center items-center bottom-4 right-4 p-4 h-14 w-14 bg-primary rounded-full hover:animate-pulse">
-            <span class="text-2xl">🔝</span>
+            <span class="text-2xl"><i class="fa-solid fa-arrow-up"></i></span>
         </a>
         <!-- Back To Top End -->
 
@@ -495,14 +495,14 @@
         <section id="popup">
 
             <!-- Popup 1 -->
-            <div id="info-popup" tabindex="-1" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark md:p-8">
+            <div id="info-popup" tabindex="-1" class="hidden fixed inset-0 z-[99999] flex items-center justify-center bg-black bg-opacity-50">
+                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto top-16 sm:top-8">
+                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark sm:p-6 md:p-8">
                         <div class="justify-center text-center mb-4 text-sm font-light text-gray-500 dark:text-white">
-                            <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">Introduction to Programming Logic (Programming Logic 101)</h3>
+                            <h3 class="mb-3 text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Introduction to Programming Logic (Programming Logic 101)</h3>
                             <p>
-                                <img src="img/certificate/1.jpg" alt="Pengenalan ke Logika Pemrograman (Programming Logic 101)">
-                                <p class="font-medium text-secondary text-base mb-4 my-4">A Dicoding Certificate is Awarded for Graduation in the Class Introduction to <span class="font-bold">Programming Logic (Programming Logic 101)</span></p>
+                                <img src="img/certificate/1.jpg" alt="Pengenalan ke Logika Pemrograman (Programming Logic 101)" class="w-full h-auto sm:max-w-xs md:max-w-md mx-auto">
+                                <p class="font-medium text-secondary text-sm sm:text-base mb-4 my-4">A Dicoding Certificate is Awarded for Graduation in the Class Introduction to <span class="font-bold">Programming Logic (Programming Logic 101)</span></p>
                             </p>
                         </div>
                         <div class="justify-center items-center pt-0 space-y-4 sm:flex sm:space-y-0">
@@ -518,9 +518,9 @@
             </div>
 
             <!-- Popup 2 -->
-            <div id="info-popup2" tabindex="-1" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark md:p-8">
+            <div id="info-popup2" tabindex="-1" class="hidden fixed inset-0 z-[99999] flex items-center justify-center bg-black bg-opacity-50">
+                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto top-16 sm:top-8">
+                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark sm:p-6 md:p-8">
                         <div class="justify-center text-center mb-4 text-sm font-light text-gray-500 dark:text-white">
                             <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">Learn the Basics of Google Cloud</h3>
                             <p>
@@ -541,9 +541,9 @@
             </div>
 
             <!-- Popup 3 -->
-            <div id="info-popup3" tabindex="-1" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark md:p-8">
+            <div id="info-popup3" tabindex="-1" class="hidden fixed inset-0 z-[99999] flex items-center justify-center bg-black bg-opacity-50">
+                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto top-16 sm:top-8">
+                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark sm:p-6 md:p-8">
                         <div class="justify-center text-center mb-4 text-sm font-light text-gray-500 dark:text-white">
                             <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
                                 Mastering SOLID Principles to Boost Engineering Career
@@ -568,11 +568,11 @@
             </div>
             
             <!-- Popup 4 -->
-            <div id="info-popup4" tabindex="-1" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark md:p-8">
+            <div id="info-popup4" tabindex="-1" class="hidden fixed inset-0 z-[99999] flex items-center justify-center bg-black bg-opacity-50">
+                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto top-16 sm:top-8">
+                    <div class="relative p-4 bg-white rounded-lg shadow dark:bg-dark sm:p-6 md:p-8">
                         <div class="justify-center text-center mb-4 text-sm font-light text-gray-500 dark:text-white">
-                            <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">Mastering SOLID Principles to Boost Engineering Career</h3>
+                            <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">Digital Literacy Seminar</h3>
                             <p>
                                 <img src="img/certificate/LitDig.jpg" alt="">
                                 <p class="font-medium text-secondary text-base mb-4 my-4"><span class="font-bold">Digital Literacy</span> Seminar The Education Sector of SMK Negeri 1 Ciomas has the theme Digital Literacy, Smartness in the Digital Era Organized by the Directorate of Informatics Empowerment, Kominfo</p>
@@ -592,8 +592,8 @@
         </section>
         <!-- Popup End -->
 
-<script src="js/script.js"></script>
-<script src="js/popup.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/popup.js"></script>
 
 </body>
 </html>
