@@ -1,0 +1,115 @@
+.body {
+  display: grid;
+}
+
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .icon {
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a {
+  display: block;
+  height: 60px;
+  width: 60px;
+  color: #000;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a .fa-threads {
+  color: #000;
+}
+
+.wrapper .icon a i {
+  line-height: 60px;
+  font-size: 25px;
+}
+
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.icon .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: inherit;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.wrapper .icon:hover a {
+  color: #fff;
+}
+
+.wrapper .icon:hover a,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .tiktok:hover a,
+.wrapper .tiktok:hover .tooltip {
+  background: #69c9d0;
+}
+
+.wrapper .x:hover a,
+.wrapper .x:hover .tooltip {
+  background: #000000;
+}
+
+.wrapper .instagram:hover a,
+.wrapper .instagram:hover .tooltip {
+  background: #e1306c;
+}
+
+.wrapper .github:hover a,
+.wrapper .github:hover .tooltip {
+  background: #333;
+}
+
+.wrapper .youtube:hover a,
+.wrapper .youtube:hover .tooltip {
+  background: #de463b;
+}
+
+.wrapper .linkedin:hover a,
+.wrapper .linkedin:hover .tooltip {
+  background: #0077b5;
+}

@@ -1,0 +1,181 @@
+/* Photo Reveal */
+.photo-reveal path {
+  stroke: white;
+  stroke-width: 10px;
+  fill: none;
+}
+
+/* Thinking Blink */
+.Typewriter__cursor {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bta-hide {
+  animation: toRight 0.5s;
+  -webkit-animation: toRight 0.5s;
+}
+
+.bta-active {
+  animation: toLeft 0.5s;
+  -webkit-animation: toLeft 0.5s;
+}
+
+@keyframes toLeft {
+  from {
+    right: -100px;
+    opacity: 0;
+  }
+
+  to {
+    right: 16px;
+    opacity: 1;
+  }
+}
+
+@keyframes toRight {
+  from {
+    right: 16px;
+    opacity: 1;
+  }
+
+  to {
+    right: -100px;
+    opacity: 0;
+  }
+}
+
+#to-top {
+  overflow: hidden;
+  transition: none !important; /* Hindari transisi Tailwind mengganggu keyframe */
+}
+
+/* Animate Text */
+.animate-text {
+  background: linear-gradient(
+    to right,
+    #ff6b35,
+    #c5c3c6,
+    #1e90ff,
+    #c5c3c6,
+    #ff6b35
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateText 2.5s linear infinite;
+  -webkit-animation: animateText 2.5s linear infinite;
+}
+
+@keyframes animateText {
+  to {
+    background-position: 200%;
+  }
+}
+
+/* Animate to Right Start */
+.slider-right-1 {
+  height: 200px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slider-track-right-1 {
+  display: flex;
+  width: max-content;
+  animation: scrollRight1 17s linear infinite reverse;
+  -webkit-animation: scrollRight1 17s linear infinite reverse;
+}
+
+.slider-track-right-1:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes scrollRight1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider-track-right-1 .slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.slider-track-right-1 .slide img {
+  width: 100%;
+  transition: transform 1s;
+}
+/* Animate to Right End */
+
+/* Animate to Left Start */
+.slider-left {
+  height: 200px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slider-track-left {
+  display: flex;
+  width: fit-content;
+  animation: scrollLeft 20s linear infinite;
+  -webkit-animation: scrollLeft 20s linear infinite;
+}
+
+.slider-track-left:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider-track-left .slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  perspective: 100px;
+}
+
+.slider-track-left .slide img {
+  width: 100%;
+  transition: transform 1s;
+}
+/* Animate to Left End */
