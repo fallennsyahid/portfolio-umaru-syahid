@@ -77,6 +77,37 @@ if (
     allPaths.forEach(path => path.style.stroke = "black");
 }
 
+// Intersection Observer
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            const id = entry.target.getAttribute('id');
+            const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+            if (entry.isIntersecting) {
+                navLinks.forEach((link) => {
+                    link.classList.remove('text-primary', 'dark:text-primary');
+                });
+
+                if (activeLink) {
+                    activeLink.classList.add('text-primary', 'dark:text-primary');
+                }
+            }
+        });
+    },
+    {
+        threshold: 0.3,
+    }
+);
+
+sections.forEach((section) => {
+    observer.observe(section);
+});
+
+
 // Image Reveal
 allPaths.forEach((path) => {
     const length = path.getTotalLength();
@@ -105,3 +136,29 @@ typewritter
     .typeString("<strong>UI/UX</strong> Designer")
     .pauseFor(2000)
     .start();
+
+// Trafic
+const redLight = document.querySelector(".red-light");
+const yellowLight = document.querySelector(".yellow-light");
+const greenLight = document.querySelector(".green-light");
+
+function turnOffAll() {
+    redLight.style.opacity = 0.3;
+    yellowLight.style.opacity = 0.3;
+    greenLight.style.opacity = 0.3;
+}
+
+function turnOn(element) {
+    element.style.opacity = 1;
+}
+
+let index = 0;
+const lights = [redLight, yellowLight, greenLight];
+
+turnOffAll();
+
+setInterval(() => {
+    turnOffAll();
+    turnOn(lights[index]);
+    index = (index + 1) % lights.length;
+}, 1000);

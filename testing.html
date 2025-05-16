@@ -1,209 +1,186 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio - Umaru Syahid M</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/extra.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <title>Document</title>
   </head>
-  <body class="flex justify-center items-center h-screen">
-    <section id="skills" class="pt-32 pb-32 bg-slate-800 dark:bg-dark">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4
-              class="animate-text font-semibold text-xl mb-2"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-            >
-              Skill
-            </h4>
-            <h2
-              class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-secondary"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              My <span class="text-primary">Skill</span>
-            </h2>
-            <p
-              class="font-medium text-secondary md:text-lg"
-              data-aos="fade-down"
-              data-aos-delay="300"
-            >
-              These are some of the languages ​​and frameworks that I have
-              learned, I use these languages ​​to create
-              <span class="font-bold text-slate-200 hover:underline">
-                Front-End, Back-End, and Design
-              </span>
-            </p>
-          </div>
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      height: 100%;
+      background: url(https://i.imgur.com/2ZgHKbQ.jpg) center no-repeat;
+      background-size: cover;
+    }
+
+    .blur {
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+      filter: blur(5px);
+    }
+
+    a.btn {
+      width: 150px;
+      display: block;
+      margin: -25px 0 0 -75px;
+      padding: 1em 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font:
+        1.125em "Arial",
+        sans-serif;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 5px;
+      background: rgba(217, 67, 86, 1);
+    }
+
+    .modal-wrapper {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(255, 257, 153, 0.75);
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .modal-wrapper.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      width: 50%;
+      height: 85%;
+      display: block;
+      margin: 30% 0 0 -300px;
+      position: relative;
+      top: 40%;
+      left: 50%;
+      background: #fff;
+      opacity: 0;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .modal-wrapper.open .modal {
+      margin-top: -200px;
+      opacity: 1;
+    }
+
+    .head {
+      width: 90%;
+      height: 32px;
+      padding: 1.5em 5%;
+      overflow: hidden;
+      background: #01bce5;
+    }
+
+    .btn-close {
+      width: 32px;
+      height: 32px;
+      display: block;
+      float: right;
+    }
+
+    .btn-close::before,
+    .btn-close::after {
+      content: "";
+      width: 32px;
+      height: 6px;
+      display: block;
+      background: #fff;
+    }
+
+    .btn-close::before {
+      margin-top: 12px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .btn-close::after {
+      margin-top: -6px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+
+    .content img {
+      max-width: 100%;
+      max-height: 60vh; /* Batas tinggi gambar agar tidak memakan seluruh ruang */
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      text-align: center;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+  </style>
+
+  <body>
+    <div class="page-wrapper">
+      <a class="btn trigger" href="javascript:;">Click Me!</a>
+    </div>
+    <div class="modal-wrapper">
+      <div class="modal">
+        <div class="head">
+          <a class="btn-close trigger" href="javascript:;"></a>
         </div>
-
-        <div class="w-full px-4">
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mx-6">
-            <!-- Front-End -->
-            <div
-              class="relative border border-primary rounded-lg p-6 bg-white shadow-sm"
-            >
-              <div class="absolute -top-4 left-4 text-4xl text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-8 h-8 text-gray-600 stroke-[3]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-                </svg>
-              </div>
-
-              <div class="flex flex-col mt-4">
-                <div class="flex items-center mb-4">
-                  <div
-                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white"
-                  >
-                    <i class="fa-solid fa-code"></i>
-                  </div>
-                  <span class="ml-2 text-xl font-semibold text-secondary">
-                    Front <span class="text-primary">End</span>
-                  </span>
-                </div>
-
-                <p class="text-gray-800 text-lg">
-                  Alaa is a highly professional developer with excellent
-                  communication and timely project completion. Highly
-                  recommended!
-                </p>
-              </div>
-
-              <div class="absolute -bottom-4 right-4 text-4xl text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-gray-600 transform rotate-180"
-                >
-                  <path
-                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
-                  ></path>
-                  <path
-                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <!-- Back-End -->
-            <div
-              class="relative border border-primary rounded-lg p-6 bg-white shadow-sm"
-            >
-              <div class="absolute -top-4 left-4 text-4xl text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-8 h-8 text-gray-600 stroke-[3]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-                </svg>
-              </div>
-
-              <div class="flex flex-col mt-4">
-                <div class="flex items-center mb-4">
-                  <div
-                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white"
-                  >
-                    <i class="fa-solid fa-brain"></i>
-                  </div>
-                  <span class="ml-2 text-xl font-semibold text-secondary">
-                    Back <span class="text-primary">End</span>
-                  </span>
-                </div>
-
-                <p class="text-gray-800 text-lg">
-                  Alaa is a highly professional developer with excellent
-                  communication and timely project completion. Highly
-                  recommended!
-                </p>
-              </div>
-
-              <div class="absolute -bottom-4 right-4 text-4xl text-gray-600">
-                <i class="fa-solid fa-brain"></i>
-              </div>
-            </div>
-            <!-- Design -->
-            <div
-              class="relative border border-primary rounded-lg p-6 bg-white shadow-sm"
-            >
-              <div class="absolute -top-4 left-4 text-4xl text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-8 h-8 text-gray-600 stroke-[3]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-                </svg>
-              </div>
-
-              <div class="flex flex-col mt-4">
-                <div class="flex items-center mb-4">
-                  <div
-                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white"
-                  >
-                    <i class="fa-solid fa-palette"></i>
-                  </div>
-                  <span class="ml-2 text-xl font-semibold text-secondary">
-                    Front <span class="text-primary">End</span>
-                  </span>
-                </div>
-
-                <!-- Testimonial Text -->
-                <p class="text-gray-800 text-lg">
-                  Alaa is a highly professional developer with excellent
-                  communication and timely project completion. Highly
-                  recommended!
-                </p>
-              </div>
-
-              <!-- Quote Icon - Bottom Right -->
-              <div class="absolute -bottom-4 right-4 text-4xl text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-gray-600 transform rotate-180"
-                >
-                  <path
-                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
-                  ></path>
-                  <path
-                    d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
+        <div class="content">
+          <img src="img/certificate/1r.jpg" alt="" width="100%" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sint
+            minima quia odio praesentium repellat! Odit sunt velit provident
+            fuga.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   </body>
+  <script>
+    const trigger = document.querySelector(".trigger");
+    const modal = document.querySelector(".modal-wrapper");
+    const modalBg = document.querySelector(".page-wrapper");
+
+    trigger.addEventListener("click", (e) => {
+      modal.classList.toggle("open");
+      modalBg.classList.toggle("blue");
+      e.preventDefault();
+    });
+  </script>
 </html>

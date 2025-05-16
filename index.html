@@ -74,42 +74,35 @@
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    class="nav-link text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
                     >Beranda</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    class="nav-link text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
                     >About Me</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portfolio"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    class="nav-link text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
                     >Portfolio</a
                   >
                 </li>
                 <li class="group">
                   <a
-                    href="#skills"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
-                    >Skill</a
-                  >
-                </li>
-                <li class="group">
-                  <a
                     href="#certificate"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    class="nav-link text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
                     >Certificate</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    class="nav-link text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
                     >Contact</a
                   >
                 </li>
@@ -176,15 +169,30 @@
               </span>
             </p>
 
-            <a
-              href="https://www.instagram.com/umarusyahidm_/"
-              target="_blank"
-              class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-              data-aos="zoom-in"
-              data-aos-delay="600"
-            >
-              Contact Me
-            </a>
+            <div class="flex gap-6">
+              <a
+                href="mailto:umarusyahidmasudi1@gmail.com"
+                target="_blank"
+                class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                data-aos="zoom-in"
+                data-aos-delay="600">
+                  Contact Me
+              </a>
+              <a 
+                href="cv-umaru.pdf"
+                download="Umaru-Syahid-CV.pdf"
+                target="_blank"
+                data-aos="zoom-in"
+                data-aos-delay="600"
+                data-aos-once="true"
+                class="py-3 px-8 text-center shadow-md rounded-full ring-2 ring-[#ff5e23] bg-primary text-white font-semibold 
+                      transition-all duration-200 ease-linear 
+                      hover:bg-transparent hover:ring-white hover:shadow-lg"
+              >
+                Download CV
+              </a>
+
+            </div>
           </div>
           <div
             class="w-full self-end px-4 lg:w-1/2 md:scale-125 overflow-hidden"
@@ -661,7 +669,7 @@
     <!-- About Section Start -->
     <section
       id="about"
-      class="-mt-16 pt-32 pb-24 bg-gradient-to-br from-[#e3e7ed] to-[#d7e1ec] dark:from-[#2A2A2E] dark:to-[#1A1A1D] overflow-hidden"
+      class="min-h-screen pt-32 pb-24 bg-gradient-to-br from-[#e3e7ed] to-[#d7e1ec] dark:from-[#2A2A2E] dark:to-[#1A1A1D] overflow-hidden"
     >
       <div class="container">
         <div class="flex flex-wrap">
@@ -733,19 +741,15 @@
             <div class="wrapper">
               <div class="icon instagram">
                 <div class="tooltip">Instagram</div>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/umarusyahidm_/"><i class="fab fa-instagram"></i></a>
               </div>
               <div class="icon tiktok">
                 <div class="tooltip">Tiktok</div>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-              </div>
-              <div class="icon x">
-                <div class="tooltip">X</div>
-                <a href="#"><i class="fab fa-x"></i></a>
+                <a href="https://www.tiktok.com/@fallennxwhoo/"><i class="fab fa-tiktok"></i></a>
               </div>
               <div class="icon youtube">
                 <div class="tooltip">Youtube</div>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.youtube.com/@fallensyahid4195"><i class="fab fa-youtube"></i></a>
               </div>
               <div class="icon github">
                 <div class="tooltip">Github</div>
@@ -753,7 +757,7 @@
               </div>
               <div class="icon linkedin">
                 <div class="tooltip">LinkedIn</div>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/umaru-syahid-mas-udi-8a3a5b35a/" target="_blank"><i class="fab fa-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -791,7 +795,7 @@
                 Pondok Umaru Cottage
               </h3>
 
-              <p class="text-base font-medium text-secondary px-4">
+              <p class="text-base font-medium text-dark dark:text-secondary px-4">
                 I created this project as my final school assignment. It was a challenge to build something independently, and I chose to develop a web application for a cottage business.
               </p>
 
@@ -825,7 +829,7 @@
                 Miss Tea Shop
               </h3>
 
-              <p class="text-base font-medium text-secondary px-4">
+              <p class="text-base font-medium text-dark dark:text-secondary px-4">
                 I made this website as part of an exercise to improve my knowledge of HTML, CSS, and JavaScript.
               </p>
 
@@ -861,7 +865,7 @@
             </div>
           </div>
           <!-- 3 -->
-          <div class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700" data-aos="fade-right" data-aos-delay="400">
+          <div class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700" data-aos="fade-right" data-aos-delay="200">
             <div class="rounded-t-xl shadow-md overflow-hidden">
               <img src="img/portfolio/7.png" alt="Pondok Umaru Cottage" class="aspect-video" />
             </div>
@@ -871,7 +875,7 @@
                 Caseths La Magasin's
               </h3>
 
-              <p class="text-base font-medium text-secondary px-4">
+              <p class="text-base font-medium text-dark dark:text-secondary px-4">
                 I have created like some e-commerce website with my team, the name is Caseths La Magasin's.
               </p>
 
@@ -896,7 +900,7 @@
             </div>
           </div>
           <!-- 4 -->
-          <div class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700" data-aos="fade-left" data-aos-delay="400">
+          <div class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700" data-aos="fade-left" data-aos-delay="200">
             <div class="rounded-t-xl shadow-md overflow-hidden">
               <img src="img/portfolio/3.png" alt="Pondok Umaru Cottage" class="aspect-video" />
             </div>
@@ -906,7 +910,7 @@
                 BangbaraPOS
               </h3>
 
-              <p class="text-base font-medium text-secondary px-4">
+              <p class="text-base font-medium text-dark dark:text-secondary px-4">
                 This website I'm cretaed with my teams for final assigment and for my client.
               </p>
 
@@ -936,7 +940,7 @@
     <!-- Portfolio Section End -->
 
     <!-- Certificate Section Start -->
-    <section id="certificate" class="pt-36 pb-32 bg-slate-100 dark:bg-dark" x-data="certificates">
+    <section id="certificate" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
@@ -1111,7 +1115,7 @@
 
     <!-- Contact Section Start -->
     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
-      <div class="container">
+      <div class="container" data-aos="fade-down" data-aos-duration="1000">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-xl text-primary mb-2">Contact</h4>
@@ -1181,11 +1185,11 @@
     <!-- Contact Section End -->
 
     <!-- Footer Section Start -->
-    <section id="footer" class="bg-dark pt-24 pb-12">
+    <section id="footer" class="bg-dark pt-24 pb-12 overflow-hidden">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/4">
-            <h2 class="font-bold text-4xl text-white mb-5 truncate">
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="font-bold text-4xl text-white mb-5">
               Umaru Syahid Mas'udi
             </h2>
             <h3 class="font-bold text-2xl mb-2">Contact Me</h3>
@@ -1193,83 +1197,20 @@
             <p>Jl. Kavling Panorama 1 No. 1</p>
             <p>Kota Bogor</p>
           </div>
-          <div class="w-full px-4 mb-12 md:w-1/4">
-            <h3 class="font-semibold text-xl text-white mb-5">Certificate</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a
-                  href="#certificate"
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Introduction to Programming Logic (Programming Logic 101)</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Learn the Basics of Google Cloud</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Digital Literacy Seminar</a
-                >
-              </li>
-            </ul>
+          <div class="w-full px-4 mb-12 md:w-1/3" data-aos="zoom-out" data-aos-duration="1000">
+            <img src="./img/profil.png" alt="Umaru Syahid Mas'udi" class="block -mt-28">
           </div>
-          <div class="w-full px-4 mb-12 md:w-1/4">
-            <h3 class="font-semibold text-xl text-white mb-5">Link</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a
-                  href="#home"
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#portfolio"
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Portfolio</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Skill</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#certificate"
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Certificate</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="inline-block text-base hover:text-primary mb-5"
-                  >Contact</a
-                >
-              </li>
-            </ul>
+          <div class="w-full px-16 mb-12 ml-0 md:w-1/3 flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1000"> 
+              <div class="trafic-container">
+                <div class="red-light"></div>
+                <div class="yellow-light"></div>
+                <div class="green-light"></div>
+              </div>
           </div>
         </div>
 
-        <div class="w-full pt-10 border-t border-slate-700">
-          <div class="flex items-center justify-center mb-5">
+        <div class="w-full pt-10 border-t border-slate-700" data-aos="zoom-in-down" data-aos-duration="800">
+          <div class="flex items-center justify-center mb-5" >
             <!-- Instagram -->
             <a
               href="https://www.instagram.com/umarusyahidm_/"
@@ -1406,9 +1347,7 @@
     <!-- Popup Start -->
 
     <!-- Popup End -->
-
     <script src="js/script.js"></script>
-    <!-- Tambahkan sebelum penutup </body> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
