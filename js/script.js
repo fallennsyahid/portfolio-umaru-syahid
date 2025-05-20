@@ -6,24 +6,13 @@ window.onscroll = function () {
 
     if (window.scrollY > fixedNav) {
         header.classList.add('navbar-fixed');
-        toTop.classList.remove('hidden');
+        toTop.classList.remove('opacity-0', 'bta-hide');
         toTop.classList.add('flex', 'bta-active');
         // toTop.classList.add('bta-active');
     } else {
         header.classList.remove('navbar-fixed');
-
-        // Hindari animasi ganda
-        if (!toTop.classList.contains('bta-hide')) {
-            toTop.classList.remove('bta-active');
-            toTop.classList.add('bta-hide');
-
-            // Hapus flex & tambahkan hidden SETELAH animasi selesai
-            setTimeout(() => {
-                toTop.classList.remove('flex');
-                toTop.classList.add('hidden');
-                toTop.classList.remove('bta-hide');
-            }, 300); // Sesuai durasi animasi keluar
-        }
+        toTop.classList.remove('flex', 'bta-active');
+        toTop.classList.add('opacity-0', 'bta-hide');
     }
 };
 
