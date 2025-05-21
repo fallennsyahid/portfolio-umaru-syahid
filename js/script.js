@@ -78,11 +78,11 @@ const observer = new IntersectionObserver(
 
             if (entry.isIntersecting) {
                 navLinks.forEach((link) => {
-                    link.classList.remove('text-primary', 'dark:text-primary');
+                    link.classList.remove('text-primary', 'dark:font-bold', 'dark:text-shadow');
                 });
 
                 if (activeLink) {
-                    activeLink.classList.add('text-primary', 'dark:text-primary');
+                    activeLink.classList.add('text-primary', 'dark:font-bold', 'dark:text-shadow');
                 }
             }
         });

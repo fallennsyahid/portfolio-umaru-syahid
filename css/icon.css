@@ -4,10 +4,13 @@
 
 .wrapper {
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .wrapper .icon {
-  margin: 0 20px;
+  margin: 0 10px;
   text-align: center;
   cursor: pointer;
   display: flex;
@@ -112,4 +115,35 @@
 .wrapper .linkedin:hover a,
 .wrapper .linkedin:hover .tooltip {
   background: #0077b5;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .wrapper {
+    gap: 10px;
+  }
+  .wrapper .icon {
+    margin: 0 5px;
+  }
+  .wrapper .icon a {
+    height: 45px;
+    width: 45px;
+  }
+  .wrapper .icon a i {
+    line-height: 45px;
+    font-size: 18px;
+  }
+  .wrapper .icon .tooltip {
+    font-size: 14px;
+    padding: 6px 12px;
+    top: -50px;
+  }
+  .wrapper .icon:hover .tooltip {
+    top: -50px;
+  }
+  .icon .tooltip:before {
+    height: 10px;
+    width: 10px;
+    bottom: -4px;
+  }
 }
