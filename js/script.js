@@ -151,3 +151,65 @@ setInterval(() => {
     turnOn(lights[index]);
     index = (index + 1) % lights.length;
 }, 1000);
+
+// Skills
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".tab-content");
+const tabIcons = document.querySelectorAll(".fa-caret-up");
+
+tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const isActive = btn.classList.contains("active");
+        const tabId = btn.getAttribute("data-tab");
+        const tabContent = document.getElementById(tabId);
+        const icon = btn.querySelector(".fa-caret-up");
+
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        tabContents.forEach((c) => {
+            c.classList.add("hidden");
+            c.classList.remove("tab-content-animate");
+            c.classList.remove("tab-content-animate-close");
+        });
+        tabIcons.forEach((i) => i.classList.remove("rotate-180"));
+
+        if (!isActive) {
+            btn.classList.add("active");
+            tabContent.classList.remove("hidden");
+            tabContent.classList.add("tab-content-animate");
+            tabContent.classList.remove("tab-content-animate-close");
+            icon.classList.add("rotate-180");
+        }
+    });
+});
+
+// Email Js
+(function () {
+    emailjs.init("-IT7wRUVFMBEtF-Sy"); // Ganti dengan Public Key dari EmailJS
+})();
+document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (e) {
+        e.preventDefault(); // Mencegah form reload
+
+        emailjs.sendForm("service_gw3svwl", "template_aixx3hp", this).then(
+            function (response) {
+                Toastify({
+                    text: "✅ Pesan berhasil dikirim!",
+                    duration: 1500,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#22c55e",
+                }).showToast();
+                document.getElementById("contact-form").reset(); // Reset form
+            },
+            function (error) {
+                Toastify({
+                    text: "❌ Gagal mengirim pesan. Silakan coba lagi.",
+                    duration: 1500,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#ef4444",
+                }).showToast();
+            }
+        );
+    });

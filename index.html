@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/extra.css" />
     <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/slider.css" />
     <link rel="shortcut icon" href="img/logo.webp" type="image/x-icon" />
     <!-- Localstorage Dark Mode -->
     <script>
@@ -33,6 +34,17 @@
     <script src="https://unpkg.com/typewriter-effect@2.18.0/dist/core.js"></script>
     <!-- AOS JS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -183,7 +195,7 @@
                 data-aos="zoom-in"
                 data-aos-delay="600"
                 data-aos-once="true"
-                class="py-3 px-8 text-center shadow-md rounded-full ring-2 ring-[#ff5e23] bg-primary text-white font-semibold transition-all duration-200 ease-linear hover:bg-transparent hover:ring-white hover:shadow-lg"
+                class="py-3 px-8 text-center shadow-md rounded-full ring-2 text-white ring-[#ff5e23] bg-primary font-semibold transition duration-400 ease-linear hover:bg-transparent hover:ring-gray-400 dark:hover:ring-white hover:shadow-lg dark:text-white hover:text-dark dark:hover:text-white"
               >
                 Download CV
               </a>
@@ -699,7 +711,7 @@
     <!-- About Section Start -->
     <section
       id="about"
-      class="min-h-screen pt-32 pb-24 bg-gradient-to-br from-[#e3e7ed] to-[#d7e1ec] dark:from-[#2A2A2E] dark:to-[#1A1A1D] overflow-hidden"
+      class="pt-32 pb-24 bg-gradient-to-br from-[#e3e7ed] to-[#d7e1ec] dark:from-[#2A2A2E] dark:to-[#1A1A1D] overflow-hidden"
     >
       <div class="container">
         <div class="flex flex-wrap">
@@ -755,6 +767,154 @@
             </p>
           </div>
         </div>
+        <div
+          class="flex flex-col items-center justify-center gap-4 mb-10 px-4"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="flex flex-wrap justify-center gap-4 mb-2">
+            <button
+              class="tab-button text-dark ring-1 px-6 py-2 rounded-full ring-slate-400 font-semibold dark:text-white transition-all duration-100 ease-linear hover:scale-105 hover:ring-slate-500 group"
+              data-tab="softskill"
+            >
+              Soft Skill
+              <i
+                class="fa-solid fa-caret-up ml-2 transition-all duration-200 group-hover:rotate-180"
+              ></i>
+            </button>
+
+            <button
+              class="tab-button text-dark ring-1 px-6 py-2 rounded-full ring-slate-400 font-semibold dark:text-white transition-all duration-100 ease-linear hover:scale-105 hover:ring-slate-500 group"
+              data-tab="hardskill"
+            >
+              Hard Skill
+              <i
+                class="fa-solid fa-caret-up ml-2 transition-all duration-200 group-hover:rotate-180"
+              ></i>
+            </button>
+
+            <button
+              class="tab-button text-dark ring-1 px-6 py-2 rounded-full ring-slate-400 font-semibold dark:text-white transition-all duration-100 ease-linear hover:scale-105 hover:ring-slate-500 group"
+              data-tab="hobby"
+            >
+              My Hobby
+              <i
+                class="fa-solid fa-caret-up ml-2 transition-all duration-200 group-hover:rotate-180"
+              ></i>
+            </button>
+          </div>
+
+          <div id="softskill" class="tab-content hidden">
+            <ul
+              class="text-center flex flex-wrap justify-center gap-6 mx-auto text-slate-700 dark:text-secondary"
+            >
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-microphone"></i>
+                <span>Public Speaking</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-handshake"></i>
+                <span>Team Work</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-user-tie"></i>
+                <span>Leadership</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <span>Problem Solving</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Communicaton Skills</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="hardskill" class="tab-content hidden">
+            <ul
+              class="text-center flex flex-wrap justify-center gap-6 mx-auto text-slate-700 dark:text-secondary"
+            >
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-code"></i>
+                <span>Web Development</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-palette"></i>
+                <span>Frontend & UI/UX</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Tools & Workflow</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span>Deployment & Hosting</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="hobby" class="tab-content hidden">
+            <ul
+              class="text-center flex flex-wrap justify-center gap-6 mx-auto text-slate-700 dark:text-secondary"
+            >
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-dumbbell"></i>
+                <span>Sports</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-cube"></i>
+                <span>Rubik's</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-square-root-variable"></i>
+                <span>Mathematics</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Gaming</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-book-open"></i>
+                <span>Reading</span>
+              </li>
+              <li
+                class="flex items-center justify-center py-2 px-8 rounded-lg gap-2 border-2 border-slate-400 hover:border-slate-500 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <i class="fa-solid fa-music"></i>
+                <span>Music</span>
+              </li>
+            </ul>
+          </div>
+        </div>
         <h3
           class="text-center pb-6 dark:text-secondary text-slate-600 text-2xl font-semibold"
           data-aos="fade-down"
@@ -771,19 +931,23 @@
             <div class="wrapper">
               <div class="icon instagram">
                 <div class="tooltip">Instagram</div>
-                <a href="https://www.instagram.com/umarusyahidm_/"
+                <a
+                  href="https://www.instagram.com/umarusyahidm_/"
+                  target="_blank"
                   ><i class="fab fa-instagram"></i
                 ></a>
               </div>
               <div class="icon tiktok">
                 <div class="tooltip">Tiktok</div>
-                <a href="https://www.tiktok.com/@fallennxwhoo/"
+                <a href="https://www.tiktok.com/@fallennxwhoo/" target="_blank"
                   ><i class="fab fa-tiktok"></i
                 ></a>
               </div>
               <div class="icon youtube">
                 <div class="tooltip">Youtube</div>
-                <a href="https://www.youtube.com/@fallensyahid4195"
+                <a
+                  href="https://www.youtube.com/@fallensyahid4195"
+                  target="_blank"
                   ><i class="fab fa-youtube"></i
                 ></a>
               </div>
@@ -797,6 +961,7 @@
                 <div class="tooltip">LinkedIn</div>
                 <a
                   href="https://www.linkedin.com/in/umaru-syahid-mas-udi-8a3a5b35a/"
+                  target="_blank"
                   target="_blank"
                   ><i class="fab fa-linkedin"></i
                 ></a>
@@ -841,395 +1006,87 @@
           </div>
         </div>
 
-        <div class="w-full grid gap-6 grid-cols-1 md:grid-cols-2">
-          <!-- 1 -->
-          <div
-            class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700"
-            data-aos="fade-right"
-            data-aos-delay="400"
-          >
-            <div class="rounded-t-xl shadow-md overflow-hidden">
-              <img
-                src="img/portfolio/1.webp"
-                alt="Pondok Umaru Cottage"
-                class="aspect-video"
-              />
-            </div>
+        <div>
+          <div class="container swiper">
+            <div class="card-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li
+                  class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+                >
+                  <a href="#" class="card-link">
+                    <img
+                      src="img/portfolio/1.webp"
+                      alt="1"
+                      class="card-image"
+                    />
+                    <p class="badge website">Website</p>
+                    <h2 class="card-title">Pondok Umaru Cottage</h2>
+                    <button class="card-button">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link">
+                    <img
+                      src="img/portfolio/2.webp"
+                      alt="2"
+                      class="card-image"
+                    />
+                    <p class="badge website">Website</p>
+                    <h2 class="card-title">Miss Tea Shop</h2>
+                    <button class="card-button">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link">
+                    <img
+                      src="img/portfolio/3.webp"
+                      alt="3"
+                      class="card-image"
+                    />
+                    <p class="badge website">Webiste</p>
+                    <h2 class="card-title">BangbaraPOS</h2>
+                    <button class="card-button">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link">
+                    <img
+                      src="img/portfolio/4.webp"
+                      alt="4"
+                      class="card-image"
+                    />
+                    <p class="badge mobile">Mobile App</p>
+                    <h2 class="card-title">Qode - Al Quran App</h2>
+                    <button class="card-button">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link">
+                    <img
+                      src="img/portfolio/8.webp"
+                      alt="5"
+                      class="card-image"
+                    />
+                    <p class="badge design">Web Design</p>
+                    <h2 class="card-title">Cooperative Web Design</h2>
+                    <button class="card-button">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </a>
+                </li>
+              </ul>
 
-            <div class="flex-grow">
-              <h3 class="text-2xl font-semibold text-primary m-4">
-                Pondok Umaru Cottage
-              </h3>
-
-              <p
-                class="text-base font-medium text-dark dark:text-secondary px-4"
-              >
-                I created this project as my final school assignment. It was a
-                challenge to build something independently, and I chose to
-                develop a web application for a cottage business.
-              </p>
-
-              <div class="flex gap-4 items-center px-4 py-4">
-                <img
-                  src="img/skill/bootstrap.svg"
-                  alt="Bootstrap"
-                  class="w-12 h-12"
-                />
-                <img src="img/skill/php.svg" alt="PHP" class="w-12 h-12" />
-              </div>
-            </div>
-
-            <div
-              class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
-            >
-              <!-- GitHub Icon -->
-              <a
-                href="https://github.com/fallennsyahid/pondok-umaru-cottage"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View on GitHub"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-brands fa-github text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div
-            class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700"
-            data-aos="fade-left"
-            data-aos-delay="400"
-          >
-            <div class="rounded-t-xl shadow-md overflow-hidden">
-              <img
-                src="img/portfolio/2.webp"
-                alt="Pondok Umaru Cottage"
-                class="aspect-video"
-              />
-            </div>
-
-            <div class="flex-grow">
-              <h3 class="text-2xl font-semibold text-primary m-4">
-                Miss Tea Shop
-              </h3>
-
-              <p
-                class="text-base font-medium text-dark dark:text-secondary px-4"
-              >
-                I made this website as part of an exercise to improve my
-                knowledge of HTML, CSS, and JavaScript.
-              </p>
-
-              <div class="flex gap-4 items-center px-4 py-4">
-                <img src="img/skill/html5.svg" alt="HTML" class="w-12 h-12" />
-                <img src="img/skill/css.svg" alt="CSS" class="w-12 h-12" />
-                <img
-                  src="img/skill/js.svg"
-                  alt="JavaScript"
-                  class="w-12 h-12"
-                />
-              </div>
-            </div>
-
-            <div
-              class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
-            >
-              <!-- GitHub Icon -->
-              <a
-                href="https://github.com/fallennsyahid/teh-kangen"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View on GitHub"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-brands fa-github text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
-
-              <!-- Link Icon -->
-              <a
-                href="https://teh-kangen.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View Repository Link"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-solid fa-link text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
-            </div>
-          </div>
-          <!-- 3 -->
-          <div
-            class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            <div class="rounded-t-xl shadow-md overflow-hidden">
-              <img
-                src="img/portfolio/7.webp"
-                alt="Pondok Umaru Cottage"
-                class="aspect-video"
-              />
-            </div>
-
-            <div class="flex-grow">
-              <h3 class="text-2xl font-semibold text-primary m-4">
-                Caseths La Magasin's
-              </h3>
-
-              <p
-                class="text-base font-medium text-dark dark:text-secondary px-4"
-              >
-                I have created like some e-commerce website with my team, the
-                name is Caseths La Magasin's.
-              </p>
-
-              <div class="flex gap-4 items-center px-4 py-4">
-                <img src="img/skill/css.svg" alt="CSS" class="w-12 h-12" />
-                <img
-                  src="img/skill/tailwindcss.svg"
-                  alt="TailwindCSS"
-                  class="w-12 h-12"
-                />
-                <img
-                  src="img/skill/laravel.svg"
-                  alt="Laravel"
-                  class="w-12 h-12"
-                />
-              </div>
-            </div>
-
-            <div
-              class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
-            >
-              <!-- GitHub Icon -->
-              <a
-                href="https://github.com/fallennsyahid/caseths-la-magasins"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View on GitHub"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-brands fa-github text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
-            </div>
-          </div>
-          <!-- 4 -->
-          <div
-            class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
-            <div class="rounded-t-xl shadow-md overflow-hidden">
-              <img
-                src="img/portfolio/3.webp"
-                alt="Pondok Umaru Cottage"
-                class="aspect-video"
-              />
-            </div>
-
-            <div class="flex-grow">
-              <h3 class="text-2xl font-semibold text-primary m-4">
-                BangbaraPOS
-              </h3>
-
-              <p
-                class="text-base font-medium text-dark dark:text-secondary px-4"
-              >
-                This website I'm cretaed with my teams for final assigment and
-                for my client.
-              </p>
-
-              <div class="flex gap-4 items-center px-4 py-4">
-                <img
-                  src="img/skill/tailwindcss.svg"
-                  alt="TailwindCSS"
-                  class="w-12 h-12"
-                />
-                <img
-                  src="img/skill/js.svg"
-                  alt="JavaScript"
-                  class="w-12 h-12"
-                />
-                <img
-                  src="img/skill/laravel.svg"
-                  alt="Laravel"
-                  class="w-12 h-12"
-                />
-              </div>
-            </div>
-
-            <div
-              class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
-            >
-              <!-- GitHub Icon -->
-              <a
-                href="https://github.com/fallennsyahid/bangbaraPOS"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View on GitHub"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-brands fa-github text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
-            </div>
-          </div>
-          <!-- 5 -->
-          <div
-            class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            <div class="rounded-t-xl shadow-md overflow-hidden">
-              <img src="img/portfolio/4.webp" alt="Qode" class="aspect-video" />
-            </div>
-
-            <div class="flex-grow">
-              <h3 class="text-2xl font-semibold text-primary m-4">
-                Qode - Al Quran App
-              </h3>
-
-              <p
-                class="text-base font-medium text-dark dark:text-secondary px-4"
-              >
-                This project I've created with my team using the Flutter
-                framework and Dart programming language.
-              </p>
-
-              <div class="flex gap-4 items-center px-4 py-4">
-                <img
-                  src="img/skill/flutter.svg"
-                  alt="Flutter"
-                  class="w-12 h-12"
-                />
-                <img src="img/skill/dart.svg" alt="Dart" class="w-12 h-12" />
-              </div>
-            </div>
-
-            <div
-              class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
-            >
-              <!-- GitHub Icon -->
-              <a
-                href="https://github.com/fallennsyahid/qode-flutter.git"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View on GitHub"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-brands fa-github text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
-            </div>
-          </div>
-          <!-- 6 -->
-          <div
-            class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
-            <div class="rounded-t-xl shadow-md overflow-hidden">
-              <img
-                src="img/portfolio/6.webp"
-                alt="Blog Website"
-                class="aspect-video"
-              />
-            </div>
-
-            <div class="flex-grow">
-              <h3 class="text-2xl font-semibold text-primary m-4">
-                Blog Website
-              </h3>
-
-              <p
-                class="text-base font-medium text-dark dark:text-secondary px-4"
-              >
-                This is the first project that I made using Laravel 11 Framework
-                and for learning Laravel 11.
-              </p>
-
-              <div class="flex gap-4 items-center px-4 py-4">
-                <img
-                  src="img/skill/tailwindcss.svg"
-                  alt="TailwindCSS"
-                  class="w-12 h-12"
-                />
-                <img
-                  src="img/skill/laravel.svg"
-                  alt="Laravel"
-                  class="w-12 h-12"
-                />
-              </div>
-            </div>
-
-            <div
-              class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
-            >
-              <!-- GitHub Icon -->
-              <a
-                href="https://github.com/fallennsyahid/blog-website.git"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View on GitHub"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-brands fa-github text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
-            </div>
-          </div>
-          <!-- 7 -->
-          <div
-            class="h-[90%] flex flex-col mb-12 rounded-xl shadow-2xl dark:shadow-slate-900 bg-[#F9FAFB] dark:bg-[#2C2C30] border-2 border-secondary dark:border-gray-700"
-            data-aos="fade-right"
-            data-aos-delay="200"
-          >
-            <div class="rounded-t-xl shadow-md overflow-hidden">
-              <img src="img/portfolio/8.webp" alt="Qode" class="aspect-video" />
-            </div>
-
-            <div class="flex-grow">
-              <h3 class="text-2xl font-semibold text-primary m-4">
-                Cooperative Web Design
-              </h3>
-
-              <p
-                class="text-base font-medium text-dark dark:text-secondary px-4"
-              >
-                This website design made with my team as a exercise using Figma.
-              </p>
-
-              <div class="flex gap-4 items-center px-4 py-4">
-                <img src="img/skill/figma.svg" alt="Figma" class="w-12 h-12" />
-              </div>
-            </div>
-
-            <div
-              class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
-            >
-              <!-- GitHub Icon -->
-              <a
-                href="https://www.figma.com/design/uo4k3X42uSSH9TJ7JmOCAG/MockUp?m=auto&t=V9qsOwSNufgX10go-6"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View on GitHub"
-                class="group inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 transition-colors duration-300"
-              >
-                <i
-                  class="fa-solid fa-link text-xl text-gray-700 dark:text-white group-hover:text-white transition-colors duration-300"
-                ></i>
-              </a>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -1410,7 +1267,7 @@
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-xl text-primary mb-2">Contact</h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
+              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white animate-text"
             >
               Contact Me
             </h2>
@@ -1421,9 +1278,15 @@
           </div>
         </div>
 
-        <form action="https://formspree.io/f/xdknqdzp" method="post">
+        <form id="contact-form" action="" method="post">
           <div class="w-full lg:w-2/3 lg:mx-auto">
             <div class="w-full mb-8 px-4">
+              <input
+                type="hidden"
+                name="title"
+                value="Contact Form Submission"
+              />
+
               <label for="name" class="text-base text-primary font-bold"
                 >Name</label
               >
@@ -1436,6 +1299,7 @@
                 required
               />
             </div>
+
             <div class="w-full mb-8 px-4">
               <label for="email" class="text-base text-primary font-bold"
                 >Email</label
@@ -1448,6 +1312,7 @@
                 placeholder="email.."
               />
             </div>
+
             <div class="w-full mb-8 px-4">
               <label for="message" class="text-base text-primary font-bold"
                 >Message</label
@@ -1460,6 +1325,7 @@
                 placeholder="message.."
               ></textarea>
             </div>
+
             <div class="w-full px-4">
               <button
                 type="submit"
@@ -1604,6 +1470,27 @@
                 />
               </svg>
             </a>
+
+            <!-- Linktree -->
+            <a
+              href="https://linktr.ee/umarusyahidm"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                class="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Linktree</title>
+                <path
+                  d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z"
+                />
+              </svg>
+            </a>
           </div>
           <p class="font-medium text-xs text-slate-500 text-center">
             Made with <span class="text-pink-500">❤️</span> by
@@ -1629,21 +1516,28 @@
     <a
       href="#home"
       id="to-top"
-      class="fixed z-[9999] opacity-0 flex justify-center items-center bottom-4 right-4 p-4 h-14 w-14 bg-primary rounded-full hover:animate-pulse"
+      class="fixed z-[9999] opacity-0 flex justify-center items-center bottom-4 right-4 p-4 h-14 w-14 bg-primary rounded-full"
     >
       <span class="text-2xl" id="to-top-icon"
         ><i class="fa-solid fa-arrow-up"></i
       ></span>
     </a>
     <!-- Back To Top End -->
-
-    <!-- Popup Start -->
-
-    <!-- Popup End -->
-    <script src="js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/slider.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Swiper JS -->
 </html>

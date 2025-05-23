@@ -32,35 +32,33 @@
 }
 
 .bta-hide {
-  animation: toRight 0.5s;
-  -webkit-animation: toRight 0.5s;
+  animation: active 0.5s;
+  -webkit-animation: active 0.5s;
+  cursor: default;
 }
 
 .bta-active {
-  animation: toLeft 0.5s;
-  -webkit-animation: toLeft 0.5s;
+  animation: hide 0.5s;
+  -webkit-animation: hide 0.5s;
+  cursor: pointer;
 }
 
-@keyframes toLeft {
+@keyframes hide {
   from {
-    right: -100px;
     opacity: 0;
   }
 
   to {
-    right: 16px;
     opacity: 1;
   }
 }
 
-@keyframes toRight {
+@keyframes active {
   from {
-    right: 16px;
     opacity: 1;
   }
 
   to {
-    right: -100px;
     opacity: 0;
   }
 }
@@ -117,7 +115,7 @@
   animation-play-state: paused !important;
 }
 
-@keyframes scrollLeft {
+/* @keyframes scrollLeft {
   0% {
     transform: translateX(calc(-185px * 7));
     -webkit-transform: translateX(calc(-185px * 7));
@@ -132,7 +130,7 @@
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
   }
-}
+} */
 
 .slider-track-left .slide {
   height: 200px;
@@ -228,6 +226,47 @@
   }
 }
 /* Animate to Right End */
+
+/* Tab Content */
+.tab-content-animate {
+  animation: active 0.5s ease-out;
+  -webkit-animation: active 0.5s ease-out;
+}
+
+@keyframes active {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+/* .tab-content-animate-close {
+  animation: close 0.9s ease-out forwards;
+  -webkit-animation: close 0.9s ease-out forwards;
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+} */
 
 /* Trafic Light Animation */
 .trafic-container {
