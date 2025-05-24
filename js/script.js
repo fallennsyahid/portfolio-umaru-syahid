@@ -1,3 +1,4 @@
+
 // Navbar Fixed
 window.onscroll = function () {
     const header = document.querySelector('header');
@@ -152,7 +153,7 @@ setInterval(() => {
     index = (index + 1) % lights.length;
 }, 1000);
 
-// Skills
+// Skills About
 const tabButtons = document.querySelectorAll(".tab-button");
 const tabContents = document.querySelectorAll(".tab-content");
 const tabIcons = document.querySelectorAll(".fa-caret-up");
@@ -201,6 +202,7 @@ document
                     backgroundColor: "#22c55e",
                 }).showToast();
                 document.getElementById("contact-form").reset(); // Reset form
+                history.replaceState(null, "", window.location.href);
             },
             function (error) {
                 Toastify({

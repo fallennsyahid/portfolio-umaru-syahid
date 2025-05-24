@@ -55,7 +55,10 @@
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4 py-6">
-            <a href="#" class="font-bold text-lg animate-text">
+            <a
+              href="#"
+              class="font-bold text-transparent text-lg bg-gradient-to-r from-primary to-third bg-transparent bg-clip-text"
+            >
               Umaru Syahid
             </a>
           </div>
@@ -182,7 +185,7 @@
               <a
                 href="mailto:umarusyahidmasudi1@gmail.com"
                 target="_blank"
-                class="text-base font-semibold text-center text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                class="text-base font-semibold text-center text-black bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
                 data-aos="zoom-in"
                 data-aos-delay="600"
               >
@@ -195,7 +198,7 @@
                 data-aos="zoom-in"
                 data-aos-delay="600"
                 data-aos-once="true"
-                class="py-3 px-8 text-center shadow-md rounded-full ring-2 text-white ring-[#ff5e23] bg-primary font-semibold transition duration-400 ease-linear hover:bg-transparent hover:ring-gray-400 dark:hover:ring-white hover:shadow-lg dark:text-white hover:text-dark dark:hover:text-white"
+                class="py-3 px-8 text-center shadow-md rounded-full ring-2 text-black ring-[#ff5e23] bg-primary font-semibold transition duration-400 ease-linear hover:bg-transparent hover:ring-gray-400 dark:hover:ring-white hover:shadow-lg dark:hover:text-secondary"
               >
                 Download CV
               </a>
@@ -716,13 +719,13 @@
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4
+            <h1
               class="font-bold uppercase text-primary text-lg mb-3"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
               About Me
-            </h4>
+            </h1>
             <h2
               class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white"
               data-aos="fade-right"
@@ -934,37 +937,44 @@
                 <a
                   href="https://www.instagram.com/umarusyahidm_/"
                   target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
+                >
+                  <i class="fab fa-instagram"></i>
+                  <span class="sr-only">View Social Media</span>
+                </a>
               </div>
               <div class="icon tiktok">
                 <div class="tooltip">Tiktok</div>
-                <a href="https://www.tiktok.com/@fallennxwhoo/" target="_blank"
-                  ><i class="fab fa-tiktok"></i
-                ></a>
+                <a href="https://www.tiktok.com/@fallennxwhoo/" target="_blank">
+                  <i class="fab fa-tiktok"></i>
+                  <span class="sr-only">View Social Media</span>
+                </a>
               </div>
               <div class="icon youtube">
                 <div class="tooltip">Youtube</div>
                 <a
                   href="https://www.youtube.com/@fallensyahid4195"
                   target="_blank"
-                  ><i class="fab fa-youtube"></i
-                ></a>
+                >
+                  <i class="fab fa-youtube"></i>
+                  <span class="sr-only">View Social Media</span>
+                </a>
               </div>
               <div class="icon github">
                 <div class="tooltip">Github</div>
-                <a href="https://github.com/fallennsyahid" target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
+                <a href="https://github.com/fallennsyahid" target="_blank">
+                  <i class="fab fa-github"></i>
+                  <span class="sr-only">View Social Media</span>
+                </a>
               </div>
               <div class="icon linkedin">
                 <div class="tooltip">LinkedIn</div>
                 <a
                   href="https://www.linkedin.com/in/umaru-syahid-mas-udi-8a3a5b35a/"
                   target="_blank"
-                  target="_blank"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
+                >
+                  <i class="fab fa-linkedin"> </i>
+                  <span class="sr-only">View Social Media</span>
+                </a>
               </div>
             </div>
           </div>
@@ -981,13 +991,13 @@
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4
+            <h1
               class="font-semibold text-xl text-primary mb-2"
               data-aos="fade-down"
               data-aos-duration="1000"
             >
               Portfolio
-            </h4>
+            </h1>
             <h2
               class="animate-text font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
               data-aos="fade-down"
@@ -1006,88 +1016,355 @@
           </div>
         </div>
 
-        <div>
-          <div class="container swiper">
-            <div class="card-wrapper">
-              <ul class="card-list swiper-wrapper">
-                <li
-                  class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
-                >
-                  <a href="#" class="card-link">
+        <div class="container swiper" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+              <!-- 1 -->
+              <li
+                class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+              >
+                <div class="popup-button card-link" data-tab="cottage">
+                  <img
+                    src="img/portfolio/1.webp"
+                    alt="Pondok Umaru Cottage"
+                    class="card-image"
+                  />
+                  <p class="badge website">Website</p>
+                  <h2 class="card-title text-dark dark:text-secondary">
+                    Pondok Umaru Cottage
+                  </h2>
+                  <p class="text-dark dark:text-secondary">
+                    I created this project as my final school assignment. It
+                    was a challenge to build something independently, and I
+                    chose to develop a web application for a cottage business.
+                  </p>
+                  <div class="flex items-center gap-2 mt-4">
                     <img
-                      src="img/portfolio/1.webp"
-                      alt="1"
-                      class="card-image"
+                      src="img/skill/bootstrap.svg"
+                      alt="Bootstrap"
+                      class="h-8"
                     />
-                    <p class="badge website">Website</p>
-                    <h2 class="card-title">Pondok Umaru Cottage</h2>
-                    <button class="card-button">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </a>
-                </li>
-                <li class="card-item swiper-slide">
-                  <a href="#" class="card-link">
+                    <img src="img/skill/php.svg" alt="PHP" class="h-8" />
+                  </div>
+                  <div class="card-action">
+                    <a
+                      href="https://github.com/fallennsyahid/pondok-umaru-cottage.git"
+                      target="_blank"
+                      title="View Github"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Github"
+                      >
+                        <i class="fa-brands fa-github"></i>
+                        <span class="sr-only">View Github</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- 2 -->
+              <li
+                class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+              >
+                <div class="popup-button card-link">
+                  <img
+                    src="img/portfolio/2.webp"
+                    alt="Miss Tea Shop"
+                    class="card-image"
+                  />
+                  <p class="badge website">Website</p>
+                  <h2 class="card-title text-dark dark:text-secondary">
+                    Miss Tea Shop
+                  </h2>
+                  <p class="text-dark dark:text-secondary">
+                    I made this website as part of an exercise to improve my
+                    knowledge of HTML, CSS, and JavaScript. I tried watching
+                    some videos and implementing the code as practice.
+                  </p>
+                  <div class="flex items-center gap-2 mt-4">
+                    <img src="img/skill/html5.svg" alt="HTML" class="h-8" />
+                    <img src="img/skill/css.svg" alt="CSS" class="h-8" />
+                    <img src="img/skill/js.svg" alt="JS" class="h-8" />
+                  </div>
+                  <div class="card-action">
+                    <a
+                      href="https://github.com/fallennsyahid/teh-kangen.git"
+                      target="_blank"
+                      title="View Github"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Github"
+                      >
+                        <i class="fa-brands fa-github"></i>
+                        <span class="sr-only">View Github</span>
+                      </button>
+                    </a>
+                    <a
+                      href="https://teh-kangen.vercel.app/"
+                      target="_blank"
+                      title="View Github"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Site"
+                      >
+                        <i class="fa-solid fa-link"></i>
+                        <span class="sr-only">View Site</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- 3 -->
+              <li
+                class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+              >
+                <div class="card-link">
+                  <img
+                    src="img/portfolio/3.webp"
+                    alt="BangbaraPOS"
+                    class="card-image"
+                  />
+                  <p class="badge website">Webiste</p>
+                  <h2 class="card-title text-dark dark:text-secondary">
+                    BangbaraPOS
+                  </h2>
+                  <p class="text-dark dark:text-secondary">
+                    This website was created by my team and me as a final
+                    assignment project and also to meet the needs of our
+                    client in delivering a professional online presence for
+                    their store.
+                  </p>
+                  <div class="flex items-center gap-2 mt-4">
                     <img
-                      src="img/portfolio/2.webp"
-                      alt="2"
-                      class="card-image"
+                      src="img/skill/tailwindcss.svg"
+                      alt="TailwindCSS"
+                      class="h-8"
                     />
-                    <p class="badge website">Website</p>
-                    <h2 class="card-title">Miss Tea Shop</h2>
-                    <button class="card-button">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </a>
-                </li>
-                <li class="card-item swiper-slide">
-                  <a href="#" class="card-link">
+                    <img src="img/skill/js.svg" alt="JS" class="h-8" />
                     <img
-                      src="img/portfolio/3.webp"
-                      alt="3"
-                      class="card-image"
+                      src="img/skill/laravel.svg"
+                      alt="Laravel"
+                      class="h-8"
                     />
-                    <p class="badge website">Webiste</p>
-                    <h2 class="card-title">BangbaraPOS</h2>
-                    <button class="card-button">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </a>
-                </li>
-                <li class="card-item swiper-slide">
-                  <a href="#" class="card-link">
+                  </div>
+                  <div class="card-action">
+                    <a
+                      href="https://github.com/fallennsyahid/bangbaraPOS"
+                      target="_blank"
+                      title="View Github"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Github"
+                      >
+                        <i class="fa-brands fa-github"></i>
+                        <span class="sr-only">View Github</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- 4 -->
+              <li
+                class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+              >
+                <div class="card-link">
+                  <img
+                    src="img/portfolio/6.webp"
+                    alt="Blog Website"
+                    class="card-image"
+                  />
+                  <p class="badge website">Webiste</p>
+                  <h2 class="card-title text-dark dark:text-secondary">
+                    Blog Website
+                  </h2>
+                  <p class="text-dark dark:text-secondary">
+                    This is the first project I have created using the Laravel 11 framework, intended as a learning experience to explore the features, structure, and capabilities provided by Laravel 11.
+                  </p>
+                  <div class="flex items-center gap-2 mt-4">
                     <img
-                      src="img/portfolio/4.webp"
-                      alt="4"
-                      class="card-image"
+                      src="img/skill/tailwindcss.svg"
+                      alt="TailwindCSS"
+                      class="h-8"
                     />
-                    <p class="badge mobile">Mobile App</p>
-                    <h2 class="card-title">Qode - Al Quran App</h2>
-                    <button class="card-button">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </a>
-                </li>
-                <li class="card-item swiper-slide">
-                  <a href="#" class="card-link">
                     <img
-                      src="img/portfolio/8.webp"
-                      alt="5"
-                      class="card-image"
+                      src="img/skill/laravel.svg"
+                      alt="Laravel"
+                      class="h-8"
                     />
-                    <p class="badge design">Web Design</p>
-                    <h2 class="card-title">Cooperative Web Design</h2>
-                    <button class="card-button">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </a>
-                </li>
-              </ul>
+                  </div>
+                  <div class="card-action">
+                    <a
+                      href="https://github.com/fallennsyahid/blog-website"
+                      target="_blank"
+                      title="View Github"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Github"
+                      >
+                        <i class="fa-brands fa-github"></i>
+                        <span class="sr-only">View Github</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- 5 -->
+              <li
+                class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+              >
+                <div class="card-link">
+                  <img
+                    src="img/portfolio/7.webp"
+                    alt="Caseths La Magasin's"
+                    class="card-image"
+                  />
+                  <p class="badge website">Webiste</p>
+                  <h2 class="card-title text-dark dark:text-secondary">
+                    Caseths La Magasin's
+                  </h2>
+                  <p class="text-dark dark:text-secondary">
+                    I have created an e-commerce website with my team, and the name of the e-commerce is Caseths La Magasin's, a project that focuses on selling custom phone cases online.
+                  </p>
+                  <div class="flex items-center gap-2 mt-4">
+                    <img
+                      src="img/skill/css.svg"
+                      alt="CSS"
+                      class="h-8"
+                    />
+                    <img
+                      src="img/skill/tailwindcss.svg"
+                      alt="TailwindCSS"
+                      class="h-8"
+                    />
+                    <img
+                      src="img/skill/laravel.svg"
+                      alt="Laravel"
+                      class="h-8"
+                    />
+                  </div>
+                  <div class="card-action">
+                    <a
+                      href="https://github.com/fallennsyahid/caseths-la-magasins"
+                      target="_blank"
+                      title="View Github"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Github"
+                      >
+                        <i class="fa-brands fa-github"></i>
+                        <span class="sr-only">View Github</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- 6 -->
+              <li
+                class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+              >
+                <div class="card-link">
+                  <img
+                    src="img/portfolio/4.webp"
+                    alt="Qode"
+                    class="card-image"
+                  />
+                  <p class="badge mobile">Mobile App</p>
+                  <h2 class="card-title text-dark dark:text-secondary">
+                    Qode - Al Quran App
+                  </h2>
+                  <p class="text-dark dark:text-secondary">
+                    This is the first project that I've created with my team using the Flutter
+                    framework and Dart programming language and as a excercise using that framework and language.
+                  </p>
+                  <div class="flex items-center gap-2 mt-4">
+                    <img
+                      src="img/skill/flutter.svg"
+                      alt="Flutter"
+                      class="h-8"
+                    />
+                    <img
+                      src="img/skill/dart.svg"
+                      alt="Dart"
+                      class="h-8"
+                    />
+                  </div>
+                  <div class="card-action">
+                    <a
+                      href="https://github.com/fallennsyahid/qode-flutter"
+                      target="_blank"
+                      title="View Github"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Github"
+                      >
+                        <i class="fa-brands fa-github"></i>
+                        <span class="sr-only">View Github</span>
+                      </button>
+                    </a>
+                  </div>
+                </d>
+              </li>
+              <!-- 7 -->
+              <li
+                class="card-item swiper-slide bg-[#dbdbdb] dark:bg-[#2C2C30] rounded-lg shadow-2xl dark:shadow-slate-900"
+              >
+                <div class="card-link">
+                  <img
+                    src="img/portfolio/8.webp"
+                    alt="Cooperative Web Design"
+                    class="card-image"
+                  />
+                  <p class="badge design">Web Design</p>
+                  <h2 class="card-title text-dark dark:text-secondary">
+                    Cooperative Web Design
+                  </h2>
+                  <p class="text-dark dark:text-secondary">
+                    This website design was created together with my team as an exercise project using Figma, aiming to improve our UI/UX design skills and collaborate effectively in a team environment.
+                  </p>
+                  <div class="flex items-center gap-2 mt-4">
+                    <img
+                      src="img/skill/figma.svg"
+                      alt="Figma"
+                      class="h-8"
+                    />
+                  </div>
+                  <div class="card-action">
+                    <a
+                      href="https://www.figma.com/design/uo4k3X42uSSH9TJ7JmOCAG/MockUp?m=auto&t=V9qsOwSNufgX10go-6"
+                      target="_blank"
+                      title="View Figma"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="card-button text-xl"
+                        aria-label="View Figma"
+                      >
+                        <i class="fa-solid fa-link"></i>
+                        <span class="sr-only">View Figma</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
 
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -1099,13 +1376,13 @@
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4
+            <h1
               class="font-semibold text-xl text-primary mb-2"
               data-aos="fade-down"
               data-aos-duration="1000"
             >
               Certificate
-            </h4>
+            </h1>
             <h2
               class="animate-text font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
               data-aos="fade-down"
@@ -1265,7 +1542,7 @@
       <div class="container" data-aos="fade-down" data-aos-duration="1000">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-xl text-primary mb-2">Contact</h4>
+            <h1 class="font-semibold text-xl text-primary mb-2">Contact</h1>
             <h2
               class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white animate-text"
             >
@@ -1363,7 +1640,7 @@
             data-aos-duration="1000"
           >
             <img
-              src="./img/profil.png"
+              src="./img/profil.webp"
               alt="Umaru Syahid Mas'udi"
               class="block -mt-28"
             />
@@ -1373,11 +1650,13 @@
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <div class="trafic-container">
-              <div class="red-light"></div>
-              <div class="yellow-light"></div>
-              <div class="green-light"></div>
-            </div>
+            <a href="https://github.com/fallennsyahid/trafic-light" target="_blank" title="View Github" rel="noopener noreferrer">
+              <div class="trafic-container">
+                <div class="red-light"></div>
+                <div class="yellow-light"></div>
+                <div class="green-light"></div>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -1512,24 +1791,63 @@
     </footer>
     <!-- Footer Section End -->
 
+    <!-- Popup Start -->
+    <!-- Modal Container -->
+    <!-- <div
+      id="projectModal"
+      class="fixed top-20 left-1/2 transform -translate-x-1/2 bg-white dark:bg-[#2C2C30] text-black dark:text-white rounded-xl shadow-2xl z-50 w-[90%] max-w-2xl p-6 hidden transition-all duration-300 overflow-y-auto max-h-[80vh]"
+    >
+      <button id="closeModal" class="absolute top-4 right-4 text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <img
+        id="modalImage"
+        src=""
+        alt="Project Image"
+        class="w-full rounded-md mb-4 mt-6"
+      />
+
+      <p id="modalBadge" class="badge mb-2"></p>
+      <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+      <p id="modalDescription" class="mb-4"></p>
+
+      <div
+        class="flex flex-wrap gap-2 items-center mb-4"
+        id="modalTechnologies"
+      ></div>
+
+      <div
+        class="flex gap-4 border-t-2 border-secondary dark:border-gray-700 p-4"
+      >
+        <a href="https://github.com/fallennsyahid/pondok-umaru-cottage"></a>
+      </div>
+    </div> -->
+    <!-- Popup End -->
+
     <!-- Back To Top Start -->
     <a
       href="#home"
       id="to-top"
       class="fixed z-[9999] opacity-0 flex justify-center items-center bottom-4 right-4 p-4 h-14 w-14 bg-primary rounded-full"
     >
-      <span class="text-2xl" id="to-top-icon"
-        ><i class="fa-solid fa-arrow-up"></i
-      ></span>
+      <span class="text-2xl" id="to-top-icon">
+        <i class="fa-solid fa-arrow-up"></i>
+        <span class="sr-only">Back To Top</span>
+      </span>
     </a>
     <!-- Back To Top End -->
   </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/toastify-js"
   ></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
   <script src="js/script.js"></script>
   <script src="js/slider.js"></script>
 

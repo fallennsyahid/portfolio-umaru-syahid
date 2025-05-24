@@ -252,7 +252,7 @@
   }
 }
 
-/* .tab-content-animate-close {
+.tab-content-animate-close {
   animation: close 0.9s ease-out forwards;
   -webkit-animation: close 0.9s ease-out forwards;
 }
@@ -266,7 +266,7 @@
     opacity: 0;
     transform: translateY(-30px);
   }
-} */
+}
 
 /* Trafic Light Animation */
 .trafic-container {
