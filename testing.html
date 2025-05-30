@@ -1,83 +1,110 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/slider.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
-  <body>
-    <!-- <section class="container swiper"> -->
-    <div class="container swiper">
-      <div class="card-wrapper">
-        <ul class="card-list swiper-wrapper">
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="img/portfolio/1.webp" alt="1" class="card-image" />
-              <p class="badge website">Website</p>
-              <h2 class="card-title">Pondok Umaru Cottage</h2>
-              <button class="card-button">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </a>
-          </li>
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="img/portfolio/2.webp" alt="2" class="card-image" />
-              <p class="badge website">Website</p>
-              <h2 class="card-title">Miss Tea Shop</h2>
-              <button class="card-button">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </a>
-          </li>
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="img/portfolio/3.webp" alt="3" class="card-image" />
-              <p class="badge website">Webiste</p>
-              <h2 class="card-title">BangbaraPOS</h2>
-              <button class="card-button">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </a>
-          </li>
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="img/portfolio/4.webp" alt="4" class="card-image" />
-              <p class="badge mobile">Mobile App</p>
-              <h2 class="card-title">Qode - Al Quran App</h2>
-              <button class="card-button">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </a>
-          </li>
-          <li class="card-item swiper-slide">
-            <a href="#" class="card-link">
-              <img src="img/portfolio/8.webp" alt="5" class="card-image" />
-              <p class="badge design">Web Design</p>
-              <h2 class="card-title">Cooperative Web Design</h2>
-              <button class="card-button">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </a>
-          </li>
-        </ul>
 
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Model Viewer -->
+</head>
+
+<style>
+  body {
+    min-height: 2000px;
+  }
+
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100vh;
+  }
+
+  button {
+    position: relative;
+    border: 0;
+    outline: none;
+    background: none;
+    color: rgb(103, 37, 2);
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .hover-text {
+    position: absolute;
+    content: '';
+    color: #ff6b35;
+    width: 0%;
+    inset: 0;
+    overflow: hidden;
+    border-right: 6px solid #ff6b35;
+    transition: width 0.7s ease;
+  }
+
+  button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px #ff6b35);
+  }
+</style>
+
+<body>
+  <div class="body">
+    <button>
+      &nbsp;dark&nbsp;css&nbsp;
+      <span class="hover-text" aria-hidden="true">
+        &nbsp;dark&nbsp;css&nbsp;
+      </span>
+    </button>
+  </div>
+
+  <div class="max-w-md mx-auto pt-32">
+    <div class="relative border border-gray-200 rounded-lg p-6 bg-white shadow-sm">
+      <div
+        class="absolute -top-4 left-4 flex items-center justify-center w-10 h-10 bg-white z-0 rounded-full border border-white">
+        <!-- Quote Icon 1 -->
+        <div class="text-4xl text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="text-gray-600 transform rotate-180">
+            <path
+              d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+            </path>
+            <path
+              d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+            </path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p class="text-gray-800 text-lg">
+          Alaa is a highly professional developer with excellent communication and timely project completion. Highly
+          recommended!
+        </p>
+      </div>
+
+      <!-- Quote Icon 2 -->
+      <div
+        class="absolute -bottom-4 right-4 flex justify-center items-center w-10 h-10 bg-white z-0 rounded-full border border-white">
+        <div class="text-4xl text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-600">
+            <path
+              d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+            </path>
+            <path
+              d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+            </path>
+          </svg>
+        </div>
       </div>
     </div>
-    <!-- </section> -->
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/slider.js"></script>
+  </div>
+</body>
+
 </html>

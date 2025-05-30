@@ -99,7 +99,7 @@
   gap: 10px;
 }
 
-.card-list .card-link .card-button {
+.card-list .card-link a.card-button {
   height: 45px;
   width: 45px;
   color: #ff6b35;
@@ -108,18 +108,13 @@
   margin: 20px 0 5px;
   border: 2px solid #ff6b35;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.4s ease;
-  -webkit-transition: 0.4s ease;
-  -moz-transition: 0.4s ease;
-  -ms-transition: 0.4s ease;
-  -o-transition: 0.4s ease;
 }
 
-.card-list .card-link:hover .card-button {
+.card-list .card-link:hover a.card-button {
   color: #fff;
   background: #ff6b35;
 }

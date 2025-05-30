@@ -37,35 +37,55 @@ window.addEventListener('click', function (e) {
 // Darkmode Toggle
 const darkToggle = document.querySelector('#dark-toggle');
 const html = document.querySelector('html');
+const toggleIcon = document.querySelector('#toggle-icon');
 const allPaths = document.querySelectorAll('.photo-reveal path');
 
-darkToggle.addEventListener('click', function () {
-    if (darkToggle.checked) {
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
+// Set awal sesuai localStorage
+if (localStorage.theme === 'dark') {
+    html.classList.add('dark');
+    toggleIcon.classList.remove('fa-moon');
+    toggleIcon.classList.add('fa-sun');
+    allPaths.forEach(path => path.style.stroke = "white");
+} else {
+    html.classList.remove('dark');
+    toggleIcon.classList.remove('fa-sun');
+    toggleIcon.classList.add('fa-moon');
+    allPaths.forEach(path => path.style.stroke = "black");
+}
 
-        allPaths.forEach(path => path.style.stroke = "white");
-    } else {
+darkToggle.addEventListener('click', function () {
+    const isDark = html.classList.contains('dark');
+    if (isDark) {
         html.classList.remove('dark');
         localStorage.theme = 'light';
-
+        toggleIcon.classList.remove('fa-sun');
+        toggleIcon.classList.add('fa-moon');
         allPaths.forEach(path => path.style.stroke = "black");
+    } else {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+        toggleIcon.classList.remove('fa-moon');
+        toggleIcon.classList.add('fa-sun');
+        allPaths.forEach(path => path.style.stroke = "white");
     }
 });
 
-// Move Toggle Mode
-if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-) {
-    darkToggle.checked = true;
-    html.classList.add('dark');
-    allPaths.forEach(path => path.style.stroke = "white");
-} else {
-    darkToggle.checked = false;
-    html.classList.remove('dark');
-    allPaths.forEach(path => path.style.stroke = "black");
-}
+// About Me & Experience
+const tabs = document.querySelectorAll(".tab-btn");
+const slider = document.getElementById("slider-container");
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+        // Geser slider
+        slider.style.transform = `translateX(-${index * 100}%)`;
+
+        // Toggle class aktif
+        tabs.forEach(t => t.classList.remove("tab-active"));
+        tab.classList.add("tab-active");
+    });
+});
+
+
 
 // Intersection Observer
 const sections = document.querySelectorAll('section[id]');
@@ -185,7 +205,7 @@ tabButtons.forEach((btn) => {
 
 // Email Js
 (function () {
-    emailjs.init("-IT7wRUVFMBEtF-Sy"); // Ganti dengan Public Key dari EmailJS
+    emailjs.init("-IT7wRUVFMBEtF-Sy");
 })();
 document
     .getElementById("contact-form")
