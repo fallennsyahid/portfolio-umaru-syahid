@@ -22,6 +22,16 @@ module.exports = {
       screens: {
         '2xl': '1320px',
       },
+      keyframes: {
+        'border-color': {
+          '0%': { borderColor: '#FF6B35' },     // blue-500
+          '50%': { borderColor: '#1E90FF' },    // emerald-500
+          '100%': { borderColor: '#FF6B35' },
+        },
+      },
+      animation: {
+        'border-color': 'border-color 3s ease-in-out infinite',
+      },
     },
     fontFamily: {
       'body': [

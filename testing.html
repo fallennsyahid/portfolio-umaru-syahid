@@ -11,99 +11,94 @@
 
 <style>
   body {
-    min-height: 2000px;
-  }
-
-  .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
+    background: #111;
+    display: grid;
+    place-items: center;
     height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
   }
 
-  button {
+  .input-container {
     position: relative;
-    border: 0;
-    outline: none;
-    background: none;
-    color: rgb(103, 37, 2);
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    font-weight: 800;
-    cursor: pointer;
-  }
-
-  .hover-text {
-    position: absolute;
-    content: '';
-    color: #ff6b35;
-    width: 0%;
-    inset: 0;
+    width: 350px;
+    padding: 3px;
+    border-radius: 10px;
+    background: #222;
     overflow: hidden;
-    border-right: 6px solid #ff6b35;
-    transition: width 0.7s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  button:hover .hover-text {
+  /* .border-container {
+    position: relative;
+    border: 2px solid #e5e7eb;
+    padding: 24px;
+    border-radius: 10px;
+    background: #222;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  } */
+
+  .border-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    background: linear-gradient(270deg, #FF6B35, #1E90FF, #C5C3C6);
+    background-size: 600% 600%;
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+    animation-play-state: paused;
+    animation: gradientShift 6s ease infinite;
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
     width: 100%;
-    filter: drop-shadow(0 0 23px #ff6b35);
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    outline: none;
+  }
+
+  .input-container:hover .border-effect {
+    opacity: 1;
+    animation-play-state: running;
+    /* Start animation on focus */
+  }
+
+  .input-container:hover {
+    transform: scale(1.04);
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 </style>
 
 <body>
-  <div class="body">
-    <button>
-      &nbsp;dark&nbsp;css&nbsp;
-      <span class="hover-text" aria-hidden="true">
-        &nbsp;dark&nbsp;css&nbsp;
-      </span>
-    </button>
-  </div>
 
-  <div class="max-w-md mx-auto pt-32">
-    <div class="relative border border-gray-200 rounded-lg p-6 bg-white shadow-sm">
-      <div
-        class="absolute -top-4 left-4 flex items-center justify-center w-10 h-10 bg-white z-0 rounded-full border border-white">
-        <!-- Quote Icon 1 -->
-        <div class="text-4xl text-gray-600">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="text-gray-600 transform rotate-180">
-            <path
-              d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
-            </path>
-            <path
-              d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
-            </path>
-          </svg>
-        </div>
-      </div>
-
-      <div class="text-center mt-4">
-        <p class="text-gray-800 text-lg">
-          Alaa is a highly professional developer with excellent communication and timely project completion. Highly
-          recommended!
-        </p>
-      </div>
-
-      <!-- Quote Icon 2 -->
-      <div
-        class="absolute -bottom-4 right-4 flex justify-center items-center w-10 h-10 bg-white z-0 rounded-full border border-white">
-        <div class="text-4xl text-gray-600">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-600">
-            <path
-              d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
-            </path>
-            <path
-              d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
-            </path>
-          </svg>
-        </div>
-      </div>
-    </div>
+  <div class="input-container">
+    <div class="border-effect"></div>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur sapiente quibusdam!
+      Laudantium,
+      fuga ut.</p>
   </div>
 </body>
 
