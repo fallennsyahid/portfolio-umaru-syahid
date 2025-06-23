@@ -1089,24 +1089,16 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
+.bg-\[radial-gradient\(circle_at_30\%_20\%\2c rgba\(255\2c 107\2c 53\2c 0\.2\)\2c transparent_70\%\)\] {
+  background-image: radial-gradient(circle at 30% 20%,rgba(255,107,53,0.2),transparent 70%);
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[radial-gradient\(circle_at_30\%_20\%\2c rgba\(16\2c 185\2c 129\2c 0\.2\)\2c transparent_70\%\)\] {
-  background-image: radial-gradient(circle at 30% 20%,rgba(16,185,129,0.2),transparent 70%);
-}
-
-.bg-\[radial-gradient\(circle_at_30\%_20\%\2c rgba\(255\2c 107\2c 53\2c 1\)\2c transparent_70\%\)\] {
-  background-image: radial-gradient(circle at 30% 20%,rgba(255,107,53,1),transparent 70%);
-}
-
-.bg-\[radial-gradient\(circle_at_30\%_20\%\2c rgba\(255\2c 107\2c 53\2c 0\.2\)\2c transparent_70\%\)\] {
-  background-image: radial-gradient(circle at 30% 20%,rgba(255,107,53,0.2),transparent 70%);
 }
 
 .from-\[\#e3e7ed\] {
@@ -1132,10 +1124,6 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .fill-current {
@@ -1802,10 +1790,6 @@ body {
 .dark\:bg-slate-800:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-\[radial-gradient\(circle_at_30\%_20\%\2c rgba\(16\2c 185\2c 129\2c 0\.2\)\2c transparent_70\%\)\]:is(.dark *) {
-  background-image: radial-gradient(circle at 30% 20%,rgba(16,185,129,0.2),transparent 70%);
 }
 
 .dark\:from-\[\#2A2A2E\]:is(.dark *) {
