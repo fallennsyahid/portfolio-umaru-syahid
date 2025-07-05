@@ -1,105 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- Model Viewer -->
 </head>
-
-<style>
-  body {
-    background: #111;
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  .input-container {
-    position: relative;
-    width: 350px;
-    padding: 3px;
-    border-radius: 10px;
-    background: #222;
-    overflow: hidden;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* .border-container {
-    position: relative;
-    border: 2px solid #e5e7eb;
-    padding: 24px;
-    border-radius: 10px;
-    background: #222;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  } */
-
-  .border-effect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    z-index: 1;
-    background: linear-gradient(270deg, #FF6B35, #1E90FF, #C5C3C6);
-    background-size: 600% 600%;
-    border-radius: 10px;
-    transition: opacity 0.4s ease;
-    animation-play-state: paused;
-    animation: gradientShift 6s ease infinite;
-  }
-
-  .text {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background: #222;
-    color: white;
-    outline: none;
-  }
-
-  .input-container:hover .border-effect {
-    opacity: 1;
-    animation-play-state: running;
-    /* Start animation on focus */
-  }
-
-  .input-container:hover {
-    transform: scale(1.04);
-  }
-
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-</style>
 
 <body>
 
-  <div class="input-container">
-    <div class="border-effect"></div>
-    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur sapiente quibusdam!
-      Laudantium,
-      fuga ut.</p>
-  </div>
 </body>
+
+<script>
+  const hour = 20;
+  let greeting = '';
+
+  if (hour < 12) {
+    greeting = 'Good morning';
+  } else if (hour < 18) {
+    greeting = 'Good afternoon';
+  } else {
+    greeting = 'Good evening';
+
+  }
+</script>
 
 </html>
